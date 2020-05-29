@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./weather.scss";
+import CountUp from "react-countup";
 const Weather = () => {
   const API_URL = "api.openweathermap.org/data/2.5/weather?q=";
   const API_KEY = "6f2c94ef51e1b547322d11fac29402b0";
@@ -36,7 +37,12 @@ const Weather = () => {
           <div className="center">
             <h1 className="main--temp">
               {" "}
-              {Math.round(mainweather.data.main.temp)} °C
+              <CountUp
+                start={0}
+                end={Math.round(mainweather.data.main.temp)}
+                duration={2.75}
+              />
+              °C
             </h1>
 
             <h2 className="main--country">
