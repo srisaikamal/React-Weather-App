@@ -51,6 +51,33 @@ const Weather = () => {
           ""
         )}
       </div>
+      <footer className="footer">
+        <p>
+          &copy; 2020 Open-Source Project By{" "}
+          <a className="footer--links" href="https://vsskamal.me">
+            vsskamal
+          </a>{" "}
+          available on{" "}
+          <a
+            className="footer--links"
+            href="https://github.com/srisaikamal/React-Weather-App"
+          >
+            GitHub
+          </a>{" "}
+          . Give a STAR if you like.{" "}
+          <a className="footer--links" href="openweathermap.org">
+            OpenWeatherMap
+          </a>{" "}
+          for API.
+          <a href="https://www.netlify.com">
+            <img
+              className="netlify"
+              src="https://www.netlify.com/img/global/badges/netlify-light.svg"
+              alt="Deploys by Netlify"
+            />
+          </a>
+        </p>
+      </footer>
     </div>
   );
 };
