@@ -1,0 +1,50 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.555)),
+    url(../Images/sunny.png);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  transition: all 0.7s;
+
+  &--center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &--search-box {
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background: none;
+    border: 2px solid #e74c3c;
+    color: white;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 3px solid #e74c3c;
+      transform: scale(1.1);
+    }
+  }
+
+  &--temp {
+    color: white;
+    padding: 2rem;
+    border-radius: 3rem;
+    background-color: rgba(0, 0, 0, 0.514);
+  }
+
+  &--country,
+  &--status {
+    color: white;
+  }
+  &--status {
+    text-transform: capitalize;
+  }
+}
