@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./weather.scss";
 const Weather = () => {
-  const API_URL = "http://api.openweathermap.org/data/2.5/weather?q=";
+  const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
   const API_KEY = "6f2c94ef51e1b547322d11fac29402b0";
   const [mainweather, setWeather] = useState({});
   const [query, setQuery] = useState("");
