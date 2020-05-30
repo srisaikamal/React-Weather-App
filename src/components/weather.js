@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./weather.scss";
 import CountUp from "react-countup";
+
 const Weather = () => {
   const API_URL = "api.openweathermap.org/data/2.5/weather?q=";
   const API_KEY = "6f2c94ef51e1b547322d11fac29402b0";
@@ -14,9 +15,15 @@ const Weather = () => {
         .get(`https://${API_URL}${query}&units=metric&appid=${API_KEY}`)
         .then((result) => {
           setWeather(result);
-          console.log(result.data);
         });
     }
+  };
+  const fetchDataButton = () => {
+    axios
+      .get(`https://${API_URL}${query}&units=metric&appid=${API_KEY}`)
+      .then((result) => {
+        setWeather(result);
+      });
   };
 
   return (
@@ -32,6 +39,9 @@ const Weather = () => {
           onKeyPress={fetchData}
           placeholder="City name or ZIP"
         />
+        <button onClick={fetchDataButton} className="button">
+          Search
+        </button>
 
         {typeof mainweather.data != "undefined" ? (
           <div className="center">

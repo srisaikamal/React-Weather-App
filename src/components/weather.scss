@@ -25,7 +25,17 @@
     background: none;
     border: 2px solid #e74c3c;
     color: white;
+    -webkit-box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.75);
     transition: all 0.5s;
+    border-radius: 50px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(black, 0.1);
+      border-bottom: 3px solid #e74c3c;
+    }
 
     &:hover {
       border: 3px solid #e74c3c;
@@ -38,6 +48,9 @@
     padding: 2rem;
     border-radius: 3rem;
     background-color: rgba(0, 0, 0, 0.514);
+    -webkit-box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.75);
   }
 
   &--country,
@@ -69,4 +82,25 @@
   display: block;
   margin: 0 auto;
   width: 5rem;
+}
+
+.button {
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: block;
+  padding: 0.8rem 1.5rem;
+  background: none;
+  outline: none;
+  border: 2px solid #e74c3c;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: -1px -1px 14px 1px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s;
+
+  &:hover {
+    background: white;
+    color: black;
+    border: 2px solid white;
+    transform: translateY(-2px);
+  }
 }
