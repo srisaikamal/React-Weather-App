@@ -11,4 +11,4 @@ You can reuse the code for your personal use or commerical. Please give a credit
 In this project I used Axios for asynchronous api calls to Open weather map.
 API used: openweathermap.org
 
-## Site URL [Live Site](https://5ed0dbeca15f1060c78c065c--pensive-meitner-710d42.netlify.app/)
+## Site URL [Live Site](https://app.netlify.com/sites/react-weather-app-kamal)
