@@ -42,7 +42,7 @@ const Weather = () => {
         <button onClick={fetchDataButton} className="button">
           Search
         </button>
-
+        {/* Need to add an Error message here if the user typees invalid city name or zip.  */}
         {typeof mainweather.data != "undefined" ? (
           <div className="center">
             <h1 className="main--temp">
