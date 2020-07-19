@@ -8,6 +8,7 @@ const Weather = () => {
   const API_KEY = "6f2c94ef51e1b547322d11fac29402b0";
   const [mainweather, setWeather] = useState({});
   const [query, setQuery] = useState("");
+  const [error, setError] = useState("");
 
   const fetchData = (e) => {
     if (e.key === "Enter") {
@@ -15,6 +16,12 @@ const Weather = () => {
         .get(`https://${API_URL}${query}&units=metric&appid=${API_KEY}`)
         .then((result) => {
           setWeather(result);
+          setError("");
+        })
+        .catch((error) => {
+          if (error.response.status === 404) {
+            setError("City or zip not found");
+          }
         });
     }
   };
@@ -23,6 +30,12 @@ const Weather = () => {
       .get(`https://${API_URL}${query}&units=metric&appid=${API_KEY}`)
       .then((result) => {
         setWeather(result);
+        setError("");
+      })
+      .catch((error) => {
+        if (error.response.status === 404) {
+          setError("City or zip not found");
+        }
       });
   };
 
@@ -42,7 +55,7 @@ const Weather = () => {
         <button onClick={fetchDataButton} className="button">
           Search
         </button>
-
+        {error && <h1 className="error">{error}</h1>}
         {typeof mainweather.data != "undefined" ? (
           <div className="center">
             <h1 className="main--temp">
